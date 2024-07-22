@@ -1,0 +1,252 @@
+ /* Css reset */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
+ }
+
+ /* Section */
+ section {
+     display: flex;
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+ }
+
+ /* Background Section */
+ section .bg {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     pointer-events: none;
+ }
+
+ /* Trees section */
+ section .trees {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: 100;
+     pointer-events: none;
+ }
+
+ /* Girl section and Animation*/
+ section .girl {
+     position: absolute;
+     scale: 0.55;
+     pointer-events: none;
+     animation: animateGirl 10s linear infinite;
+ }
+
+ @keyframes animateGirl {
+     0% {
+         transform: translateX(calc(100% + 100vw));
+     }
+
+     50% {
+         transform: translateX(calc(-100% - 100vw));
+     }
+
+     50.01% {
+         transform: translateX(calc(-100% - 100vw)) rotateY(180deg);
+     }
+
+     100% {
+         transform: translateX(calc(100% + 100vw)) rotateY(180deg);
+     }
+ }
+
+ /* Login section */
+ .login {
+     display: flex;
+     padding: 40px;
+     position: relative;
+     background: rgba(255, 255, 255, 0.25);
+     backdrop-filter: blur(15px);
+     border: 1px solid white;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+     border-right: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 20px;
+     width: 450px;
+     flex-direction: column;
+     gap: 30px;
+     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+ }
+
+ .login h2 {
+     width: 100%;
+     color: #9e2820;
+     margin-bottom: 10px;
+     position: relative;
+     text-align: center;
+     font-size: 2.5em;
+     font-weight: 600;
+ }
+
+ /* Login-InputBox Section */
+ .login .inputBox {
+     position: relative;
+ }
+
+ .login .inputBox input {
+     position: relative;
+     width: 100%;
+     padding: 15px 20px;
+     margin-bottom: 30px;
+     border: none;
+     border-radius: 5px;
+     background: #fff;
+     color: #9e2820;
+     outline: none;
+     font-size: 1.25em;
+ }
+
+ .login .inputBox ::placeholder {
+     color: #9e2820;
+ }
+
+ .login .inputBox #btn {
+     position: relative;
+     border: none;
+     background: #9e2820;
+     color: #fff;
+     outline: none;
+     cursor: pointer;
+     font-size: 1.25em;
+     font-weight: 500;
+     transition: 0.4s;
+ }
+
+ .login .inputBox #btn:hover {
+     background: #de574d;
+ }
+
+ /* Login group */
+ .login .group {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .login .group a {
+     color: #9e2820;
+     font-size: 1.25em;
+     font-weight: 500;
+     text-decoration: none;
+ }
+
+ .login .group a:nth-child(2) {
+     text-decoration: underline;
+ }
+
+ /* Leaves section */
+ .leaves {
+     display: flex;
+     position: absolute;
+     width: 100%;
+     height: 100vh;
+     overflow: hidden;
+     align-items: center;
+     justify-content: center;
+     z-index: 1;
+     pointer-events: none;
+ }
+
+ .leaves .set {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     pointer-events: none;
+ }
+
+ .leaves .set div {
+     display: block;
+     position: absolute;
+
+ }
+
+ /* Leaves Animation setting */
+
+ .leaves .set div:nth-child(1) {
+     left: 20%;
+     animation: animate 20s linear infinite;
+ }
+
+ .leaves .set div:nth-child(2) {
+     left: 50%;
+     animation: animate 15s linear infinite;
+ }
+
+ .leaves .set div:nth-child(3) {
+     left: 70%;
+     animation: animate 13s linear infinite;
+ }
+
+ .leaves .set div:nth-child(4) {
+     left: 5%;
+     animation: animate 16s linear infinite;
+ }
+
+ .leaves .set div:nth-child(5) {
+     left: 85%;
+     animation: animate 19s linear infinite;
+ }
+
+ .leaves .set div:nth-child(6) {
+     left: 90%;
+     animation: animate 13s linear infinite;
+ }
+
+ .leaves .set div:nth-child(7) {
+     left: 15%;
+     animation: animate 15s linear infinite;
+ }
+
+ .leaves .set div:nth-child(8) {
+     left: 60%;
+     animation: animate 16s linear infinite;
+ }
+
+ @keyframes animate {
+     0% {
+         opacity: 0;
+         top: -10%;
+         transform: translateX(20px) rotate(0deg);
+     }
+
+     10% {
+         opacity: 1;
+     }
+
+     20% {
+         transform: translateX(-20px) rotate(45deg);
+     }
+
+     40% {
+         transform: translateX(-20px) rotate(90deg);
+     }
+
+     60% {
+         transform: translateX(20px) rotate(180deg);
+     }
+
+     80% {
+         transform: translateX(-20px) rotate(45deg);
+     }
+
+     100% {
+         top: 110%;
+         transform: translateX(20px) rotate(225deg);
+     }
+ }
